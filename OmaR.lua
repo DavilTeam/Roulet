@@ -3081,7 +3081,7 @@ TextReply = 'اني بوت حبي'
 LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
 return false
 end
-end
+
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if text == "ايدي" and msg.reply_to_message_id == 0 then
 if not Redis:get(itsOmaR.."OmaR:Status:Id"..msg_chat_id) then
