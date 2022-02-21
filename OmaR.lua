@@ -2731,6 +2731,7 @@ Redis:srem(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id)
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙المجموعه : {*['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')*}\n᥀︙تم تعطيلها بنجاح *','md',true)
 end
 end
+end
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(TheOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if not Redis:get(TheOmaR..'Reply:Status'..msg.chat_id) then
 if text == 'هلو'  or text == 'هلوو'  or text == 'اهلا'  or text == 'هلاو'  or text == 'هلاوو'  then
@@ -3081,7 +3082,7 @@ TextReply = 'اني بوت حبي'
 LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
 return false
 end
-
+end
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if text == "ايدي" and msg.reply_to_message_id == 0 then
 if not Redis:get(itsOmaR.."OmaR:Status:Id"..msg_chat_id) then
