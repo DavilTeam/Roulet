@@ -4621,6 +4621,74 @@ local MSGID = string.gsub(MsgId,'.0','')
 local httpsCurl = "https://devstorm.ml/YoutubeApi/tahaj200.php?token="..Token.."&msg="..MSGID.."&Text="..URL.escape(Ttext).."&chat_id="..msg_chat_id.."&user="..msg.sender.user_id
 io.popen('curl -s "'..httpsCurl..'"')
 end
+if Redis:get(Fast.."youtube"..msg.sender.user_id..msg_chat_id) == "mp3" then
+local rep = msg.id/2097152/0.5
+local m = rep +1
+https.request("https://api.telegram.org/bot"..Token.."/sendAnimation?chat_id="..msg_chat_id.."&animation=https://t.me/youtube7odabot/7951&reply_to_message_id="..rep)
+https.request("https://api.medooo.ml/leomedo/yt?text="..URL.escape(text).."&token="..Token.."&msg_id="..rep.."&chat_id="..msg_chat_id.."&type=mp3")
+https.request("https://api.telegram.org/bot"..Token.."/deleteMessage?chat_id="..msg_chat_id.."&message_id="..m)
+Redis:del(Fast.."youtube"..msg.sender.user_id..msg_chat_id)
+end
+if Redis:get(Fast.."youtube"..msg.sender.user_id..msg_chat_id) == "mp4" then
+local rep = msg.id/2097152/0.5
+local m = rep +1
+https.request("https://api.telegram.org/bot"..Token.."/sendAnimation?chat_id="..msg_chat_id.."&animation=https://t.me/youtube7odabot/7951&reply_to_message_id="..rep)
+https.request("https://api.medooo.ml/leomedo/yt?text="..URL.escape(text).."&token="..Token.."&msg_id="..rep.."&chat_id="..msg_chat_id.."&type=mp4")
+https.request("https://api.telegram.org/bot"..Token.."/deleteMessage?chat_id="..msg_chat_id.."&message_id="..m)
+Redis:del(Fast.."youtube"..msg.sender.user_id..msg_chat_id)
+end
+if text == "يوتيوب" then
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = 'تحميل صوت', data = msg.sender.user_id..'/mp3'..msg_id}, {text = 'تحميل فيديو', data = msg.sender.user_id..'/mp4'..msg_id}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id, [[*
+※ اختر كيف تريد التحميل
+*]],"md",false, false, false, false, reply_markup)
+end
+
+
+
+if Text and Text:match('(%d+)/mp3(.*)') then
+local UserId = {Text:match('(%d+)/mp3(.*)')}
+if tonumber(IdUser) == tonumber(UserId[1]) then
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = 'source fast', url = 't.me/otlop12'}, 
+},
+}
+}
+local TextHelp = [[*
+※ ارسل ما تريد تحميله
+*]]
+Redis:set(Fast.."youtube"..IdUser..ChatId,'mp3')
+LuaTele.editMessageText(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
+end
+end
+if Text and Text:match('(%d+)/mp4(.*)') then
+local UserId = {Text:match('(%d+)/mp4(.*)')}
+if tonumber(IdUser) == tonumber(UserId[1]) then
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = 'source fast', url = 't.me/otlop12'}, 
+},
+}
+}
+local TextHelp = [[*
+※ ارسل ما تريد تحميله
+*]]
+Redis:set(Fast.."youtube"..IdUser..ChatId,'mp4')
+LuaTele.editMessageText(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
+end
+end
 if text == "@all" or text == "تاك عام" or text == "all" then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
@@ -4719,65 +4787,6 @@ keyboardd.inline_keyboard = {
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/AnimeDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text and text:match("^زخرفه (.*)$") then
-local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://boyka-api.ml/frills.php?en='..URL.escape(TextZhrfa)..'')
-zx = JSON.decode(zh)
-t = "\n ◐ قائمه الزخرفه \n⩹━━━━𖥕𝑁𝐴𝑆𝐴𖥕━━━━⩺\n"
-i = 0
-for k,v in pairs(zx.ok) do
-i = i + 1
-t = t..i.."- "..v.." \n"
-end
-LuaTele.sendText(msg_chat_id,msg_id,t,"md",true) 
-end 
----برج---
-if Redis:get(NASA.."brgi"..msg.sender.user_id) == "sendbr" then
-gk = https.request('https://apiabs.ml/brg.php?brg='..URL.escape(text)..'')
-br = JSON.decode(gk)
-i = 0
-for k,v in pairs(br.ok) do
-i = i + 1
-t = v.."\n"
-end
-LuaTele.sendText(msg_chat_id,msg_id,t,"md",true) 
-Redis:del(NASA.."brgi"..msg.sender.user_id) 
-end
-if text == "الابراج" or text == "برجي" then
-LuaTele.sendText(msg_chat_id,msg_id,"*◐ ارسل البرج الان لعرض التوقعات*","md",true) 
-Redis:set(NASA.."brgi"..msg.sender.user_id,"sendbr") 
-end
-if text and text:match("^برج (.*)$") then
-local Textbrj = text:match("^برج (.*)$")
-gk = https.request('https://apiabs.ml/brg.php?brg='..URL.escape(Textbrj)..'')
-br = JSON.decode(gk)
-i = 0
-for k,v in pairs(br.ok) do
-i = i + 1
-t = v.."\n"
-end
-LuaTele.sendText(msg_chat_id,msg_id,t,"md",true) 
-end 
------معاني-الاسماء---
-if text and text:match("^معني (.*)$") then
-local TextName = text:match("^معني (.*)$")
-as = http.request('http://167.71.14.2/Mean.php?Name='..URL.escape(TextName)..'')
-mn = JSON.decode(as)
-k = mn.meaning
-LuaTele.sendText(msg_chat_id,msg_id,k,"md",true) 
-end
----العمر---
-if text and text:match("^احسب (.*)$") then
-local Textage = text:match("^احسب (.*)$")
-ge = https.request('https://boyka-api.ml/Calculateage.php?age='..URL.escape(Textage)..'')
-ag = JSON.decode(ge)
-i = 0
-for k,v in pairs(ag.ok) do
-i = i + 1
-t = v.."\n"
-end
-LuaTele.sendText(msg_chat_id,msg_id,t,"md",true) 
 end
 if text == 'المالك' or text == 'المنشئ' then
 if msg.can_be_deleted_for_all_users == false then
