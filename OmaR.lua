@@ -5234,7 +5234,8 @@ local msg_id = msg.id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_id=' .. msg.chat_id .. '&text=' .. URL.escape(TestText).."&reply_to_message_id="..msg_id.."&parse_mode=markdown")
 end
 end
-if text == 'مبرمج سورس' or text == 'مبرمج السورس' or text == 'المبرمج' then  cal UserId_Info = LuaTele.searchPublicChat("OMMO10")
+if text == 'مبرمج سورس' or text == 'مبرمج السورس' or text == 'المبرمج' then 
+local UserId_Info = LuaTele.searchPublicChat("OMMO10")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
