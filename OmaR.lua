@@ -2731,6 +2731,376 @@ Redis:srem(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id)
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙المجموعه : {*['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')*}\n᥀︙تم تعطيلها بنجاح *','md',true)
 end
 end
+if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(TheOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
+if not Redis:get(TheOmaR..'Reply:Status'..msg.chat_id) then
+if text == 'هلو'  or text == 'هلوو'  or text == 'اهلا'  or text == 'هلاو'  or text == 'هلاوو'  then
+local OmaRTeaM = {
+'ههــلا ؏ـمري 🤭','ههـلو نـورت ححبـي ♥️','ههـلا ححبـيبي 🤗','ههــلاوو ڪـلبي'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+
+if text == 'شلونك'  or text == 'شلونكم'  then
+local OmaRTeaM = {
+'تتمـام ححـب وانـت شلـونكك 🤭💘'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+
+if text == 'باي'  or text == 'بااي'  or text == 'اروح'  or text == 'اروح احسن'  or text == 'اولي احسن'  or text == 'راح اروح'  or text == 'باي انام'  then 
+local OmaRTeaM = {
+'أُرٌجُعُ عٍيدِهآآ مٍوو تنِْسةه 𖠙 🤤♥️','وين رايـح خخـلينا متونسيـن','شبيك ضججت ححبي','دمشي لك قشمرر'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+
+if text == 'شونك'  or text == 'شونج'  or text == 'شلونج'  or text == 'شونكم'  or text == 'شلخبار'  or text == 'شلون الاخبار'  or text == 'شخبارك'  then
+local OmaRTeaM = {
+'ماﺷ͠ يةھَہّ يﻋ̝̚مريي ۅاﻧﺗ̲ت 𖠙 🤤♥️','الحۡمۘدللهۂَ ٰوانۨہتت 𖠙 🤤♥️','تمۘامۘ عمۘري ٰوانۨہتت 𖠙 🤤♥️'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+
+if text == 'وينك' or text == 'وينج' then
+local OmaRTeaM = {
+'مْوٌجہوٌدِ يہمْگُ يحلوُ 𖠙 😉♥️'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+if text == 'بوت عاوي'  or text == 'بوت زربه'  or text == 'البوت عاوي'  or text == 'البوت زربه'  then
+local OmaRTeaM = {
+'اطردكك تجرب ؟ ، 😕🔪'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+if text == 'اكلك'  or text == 'اكلج'  then
+local OmaRTeaM = {
+'ڪـولي ومااڪـول لاححـد 😂','ڪـول ححبيبي'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+if text == 'فرخ'  then
+local OmaRTeaM = {
+'ٰوينۨہهۂَ خۡل احۡصرهۂَ 𖠙 😹♥️','استغفـر الله عيب ابني'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+if text == 'تمام'  or text == 'بخير'  or text == 'الحمدلله'  or text == 'الحمدلله بخير'  or text == 'الحمدلله تمام'  or text == 'بخير الحمدلله'  or text == 'تمام الحمدلله'  then
+local OmaRTeaM = {
+'ععسـاكك ححبيبي','دايـم ضلـ؏'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+if text == 'دي'  or text == 'ديي'  or text == 'دي بابه'  then
+local OmaRTeaM = {
+'آخلُِآقٌڪڪ لُِڪڪ 𖠙 😒🔪','انججب ادبسزز 🔪🔪'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+if text == 'سلام عليكم'  or text == 'السلام عليكم'  or text == 'سلام وعليكم'  or text == 'السلام وعليكم'  then
+local OmaRTeaM = {
+'ياھَہّلْاا ۅﻋ̝̚لْيڪْم الْﺳ̭͠ لْام 𖠙 🤤♥️'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+
+if text == '😭💔'  or text == '😭😭'  or text == '😭😭😭'  or text == '😿💔'  or text == '😭??😭'  or text == '😭😭😭😭'  or text == '🌚💔'  or text == '💔🌚'  or text == '🚶‍♂💔'  or text == '💔'  or text == '😔💔'  or text == '🚶‍♀💔'  or text == '😭'  then
+local OmaRTeaM = {
+'مآآعٍآشُ آلُِي يزعٍلُِڪڪ 𖠙 😏♥️','منــو وياكك ليش تبججيي','ههـاي ليشش هيـجج','شبّيي اﻟ̣̣פﻟ̣̣و 𖠙 😿💔'
+}  
+LuaTele.sendText(msg_chat_id,msg_id,''..OmaRTeaM[math.random(#OmaRTeaM)]..'')  
+return false
+end
+
+if text == '??'  then
+TextReply = '؏ ششـنو صافـن ولكك'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'هاي'  then
+TextReply = 'هااااياااات'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'اريد اكبل'  then
+TextReply = 'اني هم اريد اكبل قابل ربي وحد'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'لتزحف'  then
+TextReply = 'دعوفه يزحف شعليك بي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'كلخرا'  then
+TextReply = 'مااكلك حبيبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'زاحف'  then
+TextReply = 'زاحف ع خالتك شكره'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'تعالي خاص'  then
+TextReply = 'هاااهاا زاحف زحف بالخاص لحكوو'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'اكرهك'  then
+TextReply = 'عساس اني احبك امشي الك'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'احبك'  then
+TextReply = 'يحياتي واني هم احبك'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'عوائل'  then
+TextReply = 'اربط فيشه حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'صايره عوائل'  then
+TextReply = 'اربط فيشه حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'واكف'  then
+TextReply = 'وين اوكف لك'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'وين المدير'  then
+TextReply = 'تفضل شرايد حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'انجب'  then
+TextReply = 'صار حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'تحبني'  then
+TextReply = 'سؤال صعب خليني افكر'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '🌚'  then
+TextReply = 'كمر اسود'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '🙄'  then
+TextReply = 'نزل عينك حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '😒'  then
+TextReply = 'شبيك كالب خلقتك'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '😳'  then
+TextReply = 'ها بس لا شفت عمتك العوبه'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '🙁'  then
+TextReply = 'تعال شكيلي اهمومك ليش ضايج حياتي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '🚶💔'  then
+TextReply = 'وين رايح تعال حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == '🙂'  then
+TextReply = 'ثكيل مطي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '🌝'  then
+TextReply = 'منورر اليوم حياتي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'صباحو'  then
+TextReply = 'صباحك عسل وقشطه يكلبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'صباح الخير'  then
+TextReply = 'احلى صباح احلى كيوت'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'كفو'  then
+TextReply = 'كفو من اصلك ضلعي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '😌'  then
+TextReply = 'والمطلوب شرايد'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'اها'  then
+TextReply = 'قابل اغشك حب'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'شسمج'  then
+TextReply = 'اسمي سعديه ام لبن'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'شسمك'  then
+TextReply = 'اسمي صكار البنات🤭'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'شوف'  then
+TextReply = 'ششوف حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'مساء الخير'  then
+TextReply = 'مساء الياسمين'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'المدرسه'  then
+TextReply = 'لاجيب اسمها لاسطرك'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'منو ديحذف رسائلي'  then
+TextReply = 'منشئ كروب يحذفها حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'البوت واكف'  then
+TextReply = 'لجذب حبي بعدني باقي واتمدد'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'غلس'  then
+TextReply = 'ماغلس لو تموت'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'حارة'  then
+TextReply = 'اي ولله كلش حاره وفف'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'هههه'  then
+TextReply = 'دايمه ان شاء لله'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'ههههه'  then
+TextReply = 'دايمه ان شاء لله'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == '😹'  then
+TextReply = 'دايمه ان شاء الله '
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'وين'  then
+TextReply = 'باارض الله واسعه'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'كافي لغوة'  then
+TextReply = 'ولله بكيفي انت شعليك '
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'نايمين'  then
+TextReply = 'اني سهران احرسكم'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'اكو احد'  then
+TextReply = 'اي كلبي اني موجود'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'فديت'  then
+TextReply = 'فداك ثولان الكروب'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'شكو'  then
+TextReply = 'كلشي ماكو رجع نام حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'اوف'  then
+TextReply = 'اوف يروحي شبيك ضايج'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+if text == 'احبج'  then
+TextReply = 'جذاب يضحك عليج'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+
+if text == 'انتة منو'  then
+TextReply = 'اني بوت حبي'
+LuaTele.sendText(msg_chat_id,msg_id,'['..TextReply..']')
+return false
+end
+end
+
+if text == 'تفعيل ردود البوت' then
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+Redis:del(TheOmaR..'Reply:Status'..msg.chat_id)
+LuaTele.sendText(msg_chat_id,msg_id,'✫︙تم تفعيل ردود البوت')
+return false
+end
+
+if text == 'تعطيل ردود البوت'  then
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+Redis:set(TheOmaR..'Reply:Status'..msg.chat_id,true)
+LuaTele.sendText(msg_chat_id,msg_id,'✫︙تم تعطيل ردود البوت')
+return false
+end
+Redis:incr(TheOmaR..'OmaR:Num:Message:User'..msg.chat_id..':'..msg.sender.user_i
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if text == "ايدي" and msg.reply_to_message_id == 0 then
 if not Redis:get(itsOmaR.."OmaR:Status:Id"..msg_chat_id) then
@@ -4720,15 +5090,7 @@ keyboardd.inline_keyboard = {
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/AnimeDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'شنو يكول' or text == "؟؟" or text == "??" or text == "شيكول" or text == "شتكول" then 
-if tonumber(msg.reply_to_message_id) > 0 then
-local result = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
-if result.content.voice_note then 
-local rep = msg.id/2097152/0.5
-https.request("https://api.medooo.ml/leomedo/voiceRecognise?token="..Token.."&chat_id="..msg_chat_id.."&file_id="..result.content.voice_note.voice.remote.id.."&msg_id="..rep)
-end
-end
-end
+
 if text == 'المالك' or text == 'المنشئ' then
 if msg.can_be_deleted_for_all_users == false then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n*•︙︙عذرآ البوت ليس ادمن في المجموعه يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
