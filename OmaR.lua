@@ -2731,8 +2731,8 @@ Redis:srem(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id)
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙المجموعه : {*['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')*}\n᥀︙تم تعطيلها بنجاح *','md',true)
 end
 end
-if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(TheOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
-if not Redis:get(TheOmaR..'Reply:Status'..msg.chat_id) then
+if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
+if not Redis:get(itsOmaR..'Reply:Status'..msg.chat_id) then
 if text == 'هلو'  or text == 'هلوو'  or text == 'اهلا'  or text == 'هلاو'  or text == 'هلاوو'  then
 local OmaRTeaM = {
 'ههــلا ؏ـمري 🤭','ههـلو نـورت ححبـي ♥️','ههـلا ححبـيبي 🤗','ههــلاوو ڪـلبي'
@@ -3087,7 +3087,7 @@ if text == 'تفعيل ردود البوت' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
-Redis:del(TheOmaR..'Reply:Status'..msg.chat_id)
+Redis:del(itsOmaR..'Reply:Status'..msg.chat_id)
 LuaTele.sendText(msg_chat_id,msg_id,'✫︙تم تفعيل ردود البوت')
 return false
 end
@@ -3096,11 +3096,11 @@ if text == 'تعطيل ردود البوت'  then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
-Redis:set(TheOmaR..'Reply:Status'..msg.chat_id,true)
+Redis:set(itsOmaR..'Reply:Status'..msg.chat_id,true)
 LuaTele.sendText(msg_chat_id,msg_id,'✫︙تم تعطيل ردود البوت')
 return false
 end
-Redis:incr(TheOmaR..'OmaR:Num:Message:User'..msg.chat_id..':'..msg.sender.user_i
+Redis:incr(itsOmaR..'OmaR:Num:Message:User'..msg.chat_id..':'..msg.sender.user_i
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if text == "ايدي" and msg.reply_to_message_id == 0 then
 if not Redis:get(itsOmaR.."OmaR:Status:Id"..msg_chat_id) then
