@@ -4621,7 +4621,7 @@ local MSGID = string.gsub(MsgId,'.0','')
 local httpsCurl = "https://devstorm.ml/YoutubeApi/tahaj200.php?token="..Token.."&msg="..MSGID.."&Text="..URL.escape(Ttext).."&chat_id="..msg_chat_id.."&user="..msg.sender.user_id
 io.popen('curl -s "'..httpsCurl..'"')
 end
-if Redis:get(Fast.."youtube"..msg.sender.user_id..msg_chat_id) == "mp3" then
+if Redis:get('Fast'.."youtube"..msg.sender.user_id..msg_chat_id) == "mp3" then
 local rep = msg.id/2097152/0.5
 local m = rep +1
 https.request("https://api.telegram.org/bot"..Token.."/sendAnimation?chat_id="..msg_chat_id.."&animation=https://t.me/youtube7odabot/7951&reply_to_message_id="..rep)
@@ -4629,7 +4629,7 @@ https.request("https://api.medooo.ml/leomedo/yt?text="..URL.escape(text).."&toke
 https.request("https://api.telegram.org/bot"..Token.."/deleteMessage?chat_id="..msg_chat_id.."&message_id="..m)
 Redis:del(Fast.."youtube"..msg.sender.user_id..msg_chat_id)
 end
-if Redis:get(Fast.."youtube"..msg.sender.user_id..msg_chat_id) == "mp4" then
+if Redis:get('Fast'.."youtube"..msg.sender.user_id..msg_chat_id) == "mp4" then
 local rep = msg.id/2097152/0.5
 local m = rep +1
 https.request("https://api.telegram.org/bot"..Token.."/sendAnimation?chat_id="..msg_chat_id.."&animation=https://t.me/youtube7odabot/7951&reply_to_message_id="..rep)
@@ -4667,7 +4667,7 @@ data = {
 local TextHelp = [[*
 ※ ارسل ما تريد تحميله
 *]]
-Redis:set(Fast.."youtube"..IdUser..ChatId,'mp3')
+Redis:set('Fast'.."youtube"..IdUser..ChatId,'mp3')
 LuaTele.editMessageText(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
 end
@@ -4685,7 +4685,7 @@ data = {
 local TextHelp = [[*
 ※ ارسل ما تريد تحميله
 *]]
-Redis:set(Fast.."youtube"..IdUser..ChatId,'mp4')
+Redis:set('Fast'.."youtube"..IdUser..ChatId,'mp4')
 LuaTele.editMessageText(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
 end
