@@ -2730,8 +2730,6 @@ end
 Redis:srem(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id)
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙المجموعه : {*['..Get_Chat.title..']('..Info_Chats.invite_link.invite_link..')*}\n᥀︙تم تعطيلها بنجاح *','md',true)
 end
-end
-end
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(TheOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if not Redis:get(TheOmaR..'Reply:Status'..msg.chat_id) then
 if text == 'هلو'  or text == 'هلوو'  or text == 'اهلا'  or text == 'هلاو'  or text == 'هلاوو'  then
