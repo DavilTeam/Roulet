@@ -6651,6 +6651,44 @@ local Text_Rand = List[math.random(#List)]
 Redis:set(itsOmaR.."OmaR:Set:Id:Group"..msg.chat_id,Text_Rand)
 return LuaTele.sendText(msg_chat_id,msg_id, '•︙تم التغيير ارسل ايدي لعرض الايدي الجديد',"md",true)  
 end
+if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
+local Text =[[
+
+- Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR .
+
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"}
+},
+{
+{text = '✫ Source info ', url = "https://t.me/EPX_SNAYBIR"}
+},
+{
+{text = '✫ Coder ', url = "https://t.me/OMMO10"}
+},
+{
+{text = '✫ TwS ', url = "https://t.me/QADHB_BOT"}
+},
+}
+local msg_id = msg.id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/NNAON/448&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'تعطيل التحقق' then
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+Redis:del(itsOmaR.."OmaR:Status:joinet"..msg_chat_id) 
+return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تعطيل التحقق ","md",true)
+end
+if text == 'تفعيل التحقق' then
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+Redis:set(itsOmaR.."OmaR:Status:joinet"..msg_chat_id,true) 
+return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تفعيل التحقق ","md",true)
+end
 --------------------------------------------------------------------------------------------------------------
 if text == "قفل التكرار" then 
 if not msg.Addictive then
@@ -9617,35 +9655,14 @@ end
 Redis:del(TheOmaR..'OmaR:Texting:DevTheOmaR')
 return LuaTele.sendText(msg_chat_id,msg_id,'★︙ تم حذف كليشه المطور')
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/OmaR2/319"
-local T =[[
-╔━━━━━━━━𓄼•★•𓄹━━━━━━━╗ 
-┇ ⦑𓆩.★ َِ𝗢ْ𝗺ْ𝗮َِ𝗥 ْ𝗮َِ𝗟 ُ𝗮َِ𝗛ْ𝗺َِ𝗘َِ𝗗 ★.𓆪⦒ ┇
-╚━━━━━━━━𓄼•★•𓄹━━━━━━━╝ 
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
 
-{
-{text = '★ Developer', url = "https://t.me/OMMO10"},{text = '★ Exp Source .', url = "https://t.me/EPX_OmaR"}
-},
-{
-{text = '★ TwS OmaR', url = "https://t.me/QADHB_BOT"}
-},
-{
-{text = ' ★ Source Channel', url = "https://t.me/OmaR"}
-},
-}
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-elseif text == 'الاوامر' then
+if text == 'الاوامر' then
 if not msg.Addictive then
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*★︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(TheOmaR..'OmaR:Channel:Join')}, },}}
-return LuaTele.sendText(msg.chat_id,msg.id,'*\n★︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(itsOmaR..'OmaR:Channel:Join')}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n✫︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
