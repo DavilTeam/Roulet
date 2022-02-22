@@ -5979,30 +5979,6 @@ end
 LuaTele.sendText(msg_chat_id,msg_id,'\n*★︙تم ترقيه - ('..y..') ادمنيه *',"md",true)  
 end
 
-if text == 'المالك' then
-if msg.can_be_deleted_for_all_users == false then
-return LuaTele.sendText(msg_chat_id,msg_id,"\n*★︙عذرآ البوت ليس ادمن في المجموعه يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
-end
-local Info_Members = LuaTele.getSupergroupMembers(msg_chat_id, "Administrators", "*", 0, 200)
-local List_Members = Info_Members.members
-for k, v in pairs(List_Members) do
-if Info_Members.members[k].status.luatele == "chatMemberStatusCreator" then
-local UserInfo = LuaTele.getUser(v.member_id.user_id)
-if UserInfo.first_name == "" then
-LuaTele.sendText(msg_chat_id,msg_id,"*★︙اوبس , المالك حسابه محذوف *","md",true)  
-return false
-end
-if UserInfo.username then
-Creator = "*★︙مالك المجموعه : @"..UserInfo.username.."*\n"
-else
-Creator = "★︙مالك المجموعه : *["..UserInfo.first_name.."](tg://user?id="..UserInfo.id..")\n"
-end
-return LuaTele.sendText(msg_chat_id,msg_id,Creator,"md",true)  
-end
-end
-end
-
-
 if text == 'كشف البوتات' then
 if not msg.Managers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*★︙هاذا الامر يخص { '..Controller_Num(6)..' }* ',"md",true)  
@@ -9416,42 +9392,256 @@ end
 Redis:del(TheOmaR..'OmaR:Texting:DevTheOmaR')
 return LuaTele.sendText(msg_chat_id,msg_id,'★︙ تم حذف كليشه المطور')
 end
-if text == 'المطور' or text == 'مطور' then
-local TextingDevTheOmaR = Redis:get(TheOmaR..'OmaR:Texting:DevTheOmaR')
-if TextingDevTheOmaR then 
-return LuaTele.sendText(msg_chat_id,msg_id,TextingDevTheOmaR,"md",true)  
-else
-local UserInfo = LuaTele.getUser(Sudo_Id)
-for Name_User in string.gmatch(UserInfo.first_name, "[^%s]+" ) do
-UserInfo.first_name = Name_User
-break
+if text == 'المالك' or text == 'المنشئ' then
+if msg.can_be_deleted_for_all_users == false then
+return LuaTele.sendText(msg_chat_id,msg_id,"\n*•︙︙عذرآ البوت ليس ادمن في المجموعه يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
+end
+if ChannelJoin(msg) == false then
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(TheOmaR..'OmaR:Channel:Join:Name')..'', url = 't.me/'..Redis:get(TheOmaR..'OmaR:Channel:Join')}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n•︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
+end
+local Info_Members = LuaTele.getSupergroupMembers(msg_chat_id, "Administrators", "*", 0, 200)
+local List_Members = Info_Members.members
+for k, v in pairs(List_Members) do
+if Info_Members.members[k].status.luatele == "chatMemberStatusCreator" then
+local UserInfo = LuaTele.getUser(v.member_id.user_id)
+if UserInfo.first_name == "" then
+LuaTele.sendText(msg_chat_id,msg_id,"*•︙︙اوبس , المالك حسابه محذوف *","md",true)  
+return false
 end 
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*★︙مطور البوت : {*['..UserInfo.first_name..'](tg://user?id='..UserInfo.id..')*}*',"md",true)  
+local photo = LuaTele.getUserProfilePhotos(UserInfo.id)
+local InfoUser = LuaTele.getUserFullInfo(UserInfo.id)
+if InfoUser.bio then
+Bio = InfoUser.bio
+else
+Bio = ''
+end
+if photo.total_count > 0 then
+local TestText = "  ✫ Owner Groups \n— — — —  S N — — — —\n •︙*Owner Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserInfo.id..")\n•︙*Owner Bio* : [❲ "..Bio.." ❳]"
+keyboardd = {} 
+keyboardd.inline_keyboard = {
+{
+{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"}
+},
+}
+local msg_id = msg.id/2097152/0.5 
+return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id='..msg.chat_id..'&caption='..URL.escape(TestText)..'&photo='..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboardd))
+else
+
+local TestText = "- معلومات المالك : \n\n- ["..UserInfo.first_name.."](tg://user?id="..UserInfo.id..")\n \n ["..Bio.."]"
+local msg_id = msg.id/2097152/0.5 
+return https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_id=' .. msg.chat_id .. '&text=' .. URL.escape(TestText).."&reply_to_message_id="..msg_id.."&parse_mode=markdown")
 end
 end
-if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/OmaR2/319"
-local T =[[
-╔━━━━━━━━𓄼•★•𓄹━━━━━━━╗ 
-┇ ⦑𓆩.★ َِ𝗢ْ𝗺ْ𝗮َِ𝗥 ْ𝗮َِ𝗟 ُ𝗮َِ𝗛ْ𝗺َِ𝗘َِ𝗗 ★.𓆪⦒ ┇
-╚━━━━━━━━𓄼•★•𓄹━━━━━━━╝ 
+end
+end
+if text == 'المطور' or text == 'مطور' then   
+local UserInfo = LuaTele.getUser(Sudo_Id) 
+local InfoUser = LuaTele.getUserFullInfo(Sudo_Id)
+if InfoUser.bio then
+Bio = InfoUser.bio
+else
+Bio = ''
+end
+local photo = LuaTele.getUserProfilePhotos(Sudo_Id)
+if photo.total_count > 0 then
+local TestText = "  ✫ Developers Bot \n— — — —  S N — — — —\n •︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..Sudo_Id..")\n•︙*Dev Bio* : [❲ "..Bio.." ❳]"
+keyboardd = {} 
+keyboardd.inline_keyboard = {
+{
+{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"}
+},
+}
+local msg_id = msg.id/2097152/0.5 
+return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id='..msg.chat_id..'&caption='..URL.escape(TestText)..'&photo='..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboardd))
+else
+local TestText = "  ✫ Developers Source \n— — — —  S N — — — —\n •︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..Sudo_Id..")\n•︙*Dev Bio* : [❲ "..Bio.." ❳]"
+local msg_id = msg.id/2097152/0.5 
+return https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_id=' .. msg.chat_id .. '&text=' .. URL.escape(TestText).."&reply_to_message_id="..msg_id.."&parse_mode=markdown")
+end
+end
+if text == 'مبرمج سورس' or text == 'مبرمج السورس' or text == 'المبرمج' then 
+local UserId_Info = LuaTele.searchPublicChat("OMMO10")
+if UserId_Info.id then
+local UserInfo = LuaTele.getUser(UserId_Info.id)
+local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
+if InfoUser.bio then
+Bio = InfoUser.bio
+else
+Bio = ''
+end
+local photo = LuaTele.getUserProfilePhotos(UserId_Info.id)
+if photo.total_count > 0 then
+local TestText = "  ✫ SNAYBIR 𝖲OURCE \n— — — —  S N — — — —\n •︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n•︙*Dev Bio* : [❲ "..Bio.." ❳]"
+keyboardd = {} 
+keyboardd.inline_keyboard = {
+{
+{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"}
+},
+}
+local msg_id = msg.id/2097152/0.5 
+return https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id='..msg.chat_id..'&caption='..URL.escape(TestText)..'&photo='..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboardd))
+else
+local TestText = "- معلومات مبرمج السورس : \\nn: name Dev . ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n\n ["..Bio.."]"
+keyboardd = {} 
+keyboardd.inline_keyboard = {
+{
+{text = '✫ Coder', url = "https://t.me/OMMO10"}
+},
+{
+{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"},
+},
+}
+local msg_id = msg.id/2097152/0.5 
+return https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_id=' .. msg.chat_id .. '&text=' .. URL.escape(TestText).."&reply_to_message_id="..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboardd))
+end
+end
+end
+
+if text == "مسح الرتب" then    
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*•︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = 'مسح المميزين', data = msg.sender.user_id..'/'.. 'DelDistinguished'},{text = 'مسح الادمنيه', data = msg.sender.user_id..'/'.. 'Addictive'},
+},
+{
+{text = 'مسح المدراء', data = msg.sender.user_id..'/'.. 'Managers'},{text = 'مسح المنشئين', data = msg.sender.user_id..'/'.. 'Originators'},
+},
+{
+{text = ' مسح الاساسين ', data =msg.sender.user_id..'/'.. 'TheBasics'}
+},
+{
+{text = '✫ إخفاء الأمر ', data =msg.sender.user_id..'/'.. 'delAmr'}
+},
+}
+}
+return LuaTele.sendText(msg_chat_id, msg_id, '•︙يمكنك من هنا التحكم في رتب المجموعة ', 'md', false, false, false, false, reply_markup)
+ end  
+
+if text == 'تغيير الايدي' or text == 'تغير الايدي' then
+if not msg.Originators then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*•︙هذا الامر يخص { '..Controller_Num(5)..' }* ',"md",true)  
+end
+local List = { 
+[[
+ ∵ USERNAME . #username
+ ∵ STAST . #stast
+ ∵ ID . #id
+ ∵ MSGS . #msgs
+]],
+[[
+ ∵ USERNAME . #username
+ ∵ STAST . #stast
+ ∵ ID . #id
+ ∵ MSGS . #msgs
+]],
+[[
+: 𝖴ِᥱ᥉ : #username .
+: Iَժ : #id .
+: Sƚِᥲ : #stast .
+: 𝖬⁪⁬⁮᥉َ𝗀 : #msgs .
+]],
+[[
+َ› Msgs : #msgs .🦇
+َ› ID : #id .🦇
+َ› Stast : #stast .🦇
+َ› UserName : #username .🦇
+]],
+[[
+☁️ . USERNAME . #username
+☁️ . STAST . #stast
+☁️ . ID . #id
+☁️ . MSGS . #msgs
+]],
+[[
+ . USERNAME . #username
+ . STAST . #stast
+ . ID . #id
+ . MSGS . #msgs
+]],
+[[
+  USERNAME . #username
+  STAST . #stast
+  ID . #id
+  MSGS . #msgs
+]],
+[[
+◜⛓️𝗨S𝗘ِr #username 🕷 .  
+◜⛓️𝗠sِG  #msgs   .
+◜⛓️𝗦𝗧 #stast  .
+◜⛓️𝗜d  #id 🕸 .
+]],
+[[
+ . USERNAME . #username
+ . STAST . #stast
+ . ID . #id
+ . MSGS . #msgs
+]],
+[[
+˛ 𝗎!𝗌 : #username ٰ⛓️ '.
+˛ 𝗆!𝗀 #msgs .
+˛ 𝗌!𝗍 : #stast .
+˛𝗂!𝖽 : #id ⛓️ '.
+]],
+[[
+َ› Msgs : #msgs .🦇
+َ› ID : #id .🦇
+َ› Stast : #stast .🦇
+َ› UserName : #username .🦇
+]],
+[[
+: 𝖴ِᥱ᥉ : #username .
+: Iَժ : #id .
+: Sƚِᥲ : #stast .
+: 𝖬⁪⁬⁮᥉َ𝗀 : #msgs .
+]]} 
+local Text_Rand = List[math.random(#List)] 
+Redis:set(TheOmaR.."OmaR:Set:Id:Group"..msg.chat_id,Text_Rand)
+return LuaTele.sendText(msg_chat_id,msg_id, '•︙تم التغيير ارسل ايدي لعرض الايدي الجديد',"md",true)  
+end
+if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
+local Text =[[
+
+- Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR .
+
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-
 {
-{text = '★ Developer', url = "https://t.me/OMMO10"},{text = '★ Exp Source .', url = "https://t.me/EPX_OmaR"}
+{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"}
 },
 {
-{text = '★ TwS OmaR', url = "https://t.me/QADHB_BOT"}
+{text = '✫ Source info ', url = "https://t.me/EPX_SNAYBIR"}
 },
 {
-{text = ' ★ Source Channel', url = "https://t.me/OmaR"}
+{text = '✫ Coder ', url = "https://t.me/OMMO10"}
+},
+{
+{text = '✫ TwS ', url = "https://t.me/QADHB_BOT"}
 },
 }
-local msgg = msg_id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-elseif text == 'الاوامر' then
+local msg_id = msg.id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/NNAON/448&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'تعطيل التحقق' then
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+Redis:del(TheOmaR.."OmaR:Status:joinet"..msg_chat_id) 
+return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تعطيل التحقق ","md",true)
+end
+if text == 'تفعيل التحقق' then
+if not msg.Addictive then
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
+end
+Redis:set(TheOmaR.."OmaR:Status:joinet"..msg_chat_id,true) 
+return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تفعيل التحقق ","md",true)
+end
+endelseif text == 'الاوامر' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*★︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
