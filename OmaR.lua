@@ -9641,7 +9641,7 @@ end
 Redis:set(TheOmaR.."OmaR:Status:joinet"..msg_chat_id,true) 
 return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تفعيل التحقق ","md",true)
 end
-endelseif text == 'الاوامر' then
+if text == 'الاوامر' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*★︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
