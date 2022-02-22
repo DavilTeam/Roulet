@@ -163,7 +163,7 @@ Status = 'المطور الثانوي'
 elseif Developers then
 Status = Redis:get(TheOmaR.."OmaR:Developer:Bot:Reply"..ChatId) or 'المطور'
 elseif TheBasics then
-Status = Redis:get(itsOmaR.."OmaR:PresidentQ:Group:Reply"..ChatId) or 'المالك'
+Status = Redis:get(TheOmaR.."OmaR:PresidentQ:Group:Reply"..ChatId) or 'المالك'
 elseif TheBasics then
 Status = Redis:get(TheOmaR.."OmaR:President:Group:Reply"..ChatId) or 'المنشئ الاساسي'
 elseif Originators then
@@ -914,8 +914,8 @@ msg.The_Controller = 3
 msg.Name_Controller = Redis:get(TheOmaR.."OmaR:Developer:Bot:Reply"..msg.chat_id) or 'المطور '
 elseif Redis:sismember(TheOmaR.."OmaR:TheBasics:Group"..msg.chat_id,msg.sender.user_id) == true then
 msg.The_Controller = 44
-msg.Name_Controller = Redis:get(itsOmaR.."OmaR:PresidentQ:Group:Reply"..msg.chat_id) or 'المالك'
-elseif Redis:sismember(itsOmaR.."OmaR:TheBasics:Group"..msg.chat_id,msg.sender.user_id) == true then
+msg.Name_Controller = Redis:get(TheOmaR.."OmaR:PresidentQ:Group:Reply"..msg.chat_id) or 'المالك'
+elseif Redis:sismember(TheOmaR.."OmaR:TheBasics:Group"..msg.chat_id,msg.sender.user_id) == true then
 msg.The_Controller = 4
 msg.Name_Controller = Redis:get(TheOmaR.."OmaR:President:Group:Reply"..msg.chat_id) or 'المنشئ الاساسي ⭐'
 elseif Redis:sismember(TheOmaR.."OmaR:Originators:Group"..msg.chat_id,msg.sender.user_id) == true then
@@ -3336,10 +3336,10 @@ if UserName[1] == "مالك" then
 if not msg.Developers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n* ✫︙هاذا الامر يخص 『 '..Controller_Num(3)..' 』* ',"md",true)  
 end
-if not Redis:sismember(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) then
+if not Redis:sismember(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ✫︙تم تنزيله مالك مسبقا ").Reply,"md",true)  
 else
-Redis:srem(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) 
+Redis:srem(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ✫︙تم تنزيله مالك ").Reply,"md",true)  
 end
 end
@@ -3474,10 +3474,10 @@ if TextMsg == "مالك" then
 if not msg.Developers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n* ✫︙هاذا الامر يخص 『 '..Controller_Num(3)..' 』* ',"md",true)  
 end
-if not Redis:sismember(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) then
+if not Redis:sismember(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ✫︙تم تنزيله مالك مسبقا ").Reply,"md",true)  
 else
-Redis:srem(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) 
+Redis:srem(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ✫︙تم تنزيله مالك ").Reply,"md",true)  
 end
 end
@@ -3616,10 +3616,10 @@ if UserId[1] == "مالك" then
 if not msg.Developers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n* ✫︙هاذا الامر يخص 『 '..Controller_Num(3)..' 』* ',"md",true)  
 end
-if not Redis:sismember(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) then
+if not Redis:sismember(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId[2]," ✫︙تم تنزيله مالك مسبقا ").Reply,"md",true)  
 else
-Redis:srem(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) 
+Redis:srem(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId[2]," ✫︙تم تنزيله مالك ").Reply,"md",true)  
 end
 end
@@ -3756,10 +3756,10 @@ if UserName[1] == "مالك" then
 if not msg.Developers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n* ✫︙هاذا الامر يخص 『 '..Controller_Num(3)..' 』* ',"md",true)  
 end
-if Redis:sismember(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) then
+if Redis:sismember(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ✫︙تم ترقيته مالك مسبقا ").Reply,"md",true)  
 else
-Redis:sadd(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) 
+Redis:sadd(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId_Info.id) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id," ✫︙تم ترقيته مالك ").Reply,"md",true)  
 end
 end
@@ -3900,10 +3900,10 @@ if TextMsg == "مالك" then
 if not msg.Developers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n* ✫︙هاذا الامر يخص 『 '..Controller_Num(3)..' 』* ',"md",true)  
 end
-if Redis:sismember(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) then
+if Redis:sismember(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ✫︙تم ترقيته مالك مسبقا ").Reply,"md",true)  
 else
-Redis:sadd(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) 
+Redis:sadd(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender.user_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender.user_id," ✫︙تم ترقيته مالك ").Reply,"md",true)  
 end
 end
@@ -4047,13 +4047,13 @@ if not msg.Developers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n* ✫︙هاذا الامر يخص 『 '..Controller_Num(3)..' 』* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(itsOmaR..'OmaR:Channel:Join:Name')..'', url = 't.me/'..Redis:get(itsOmaR..'OmaR:Channel:Join')}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(TheOmaR..'OmaR:Channel:Join:Name')..'', url = 't.me/'..Redis:get(TheOmaR..'OmaR:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'\n• يجب عليك الاشتراك في القناه',"md",false, false, false, false, reply_markup)
 end
-if Redis:sismember(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) then
+if Redis:sismember(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) then
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId[2]," ✫︙تم ترقيته مالك مسبقا ").Reply,"md",true)  
 else
-Redis:sadd(itsOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) 
+Redis:sadd(TheOmaR.."OmaR:TheBasicsQ:Group"..msg_chat_id,UserId[2]) 
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId[2]," ✫︙تم ترقيته مالك ").Reply,"md",true)  
 end
 end
@@ -9789,7 +9789,7 @@ if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(itsOmaR..'OmaR:Channel:Join')}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(TheOmaR..'OmaR:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n✫︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local reply_markup = LuaTele.replyMarkup{
