@@ -6445,7 +6445,7 @@ if msg.can_be_deleted_for_all_users == false then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n*•︙︙عذرآ البوت ليس ادمن في المجموعه يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(itsOmaR..'OmaR:Channel:Join:Name')..'', url = 't.me/'..Redis:get(itsOmaR..'OmaR:Channel:Join')}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = ''..Redis:get(TheOmaR..'OmaR:Channel:Join:Name')..'', url = 't.me/'..Redis:get(TheOmaR..'OmaR:Channel:Join')}, },}}
 return LuaTele.sendText(msg.chat_id,msg.id,'*\n•︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local Info_Members = LuaTele.getSupergroupMembers(msg_chat_id, "Administrators", "*", 0, 200)
@@ -6648,45 +6648,44 @@ local List = {
 : 𝖬⁪⁬⁮᥉َ𝗀 : #msgs .
 ]]} 
 local Text_Rand = List[math.random(#List)] 
-Redis:set(itsOmaR.."OmaR:Set:Id:Group"..msg.chat_id,Text_Rand)
+Redis:set(TheOmaR.."OmaR:Set:Id:Group"..msg.chat_id,Text_Rand)
 return LuaTele.sendText(msg_chat_id,msg_id, '•︙تم التغيير ارسل ايدي لعرض الايدي الجديد',"md",true)  
 end
-if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-local Text =[[
-
-- Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR .
-
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+photo = "https://t.me/SNAYBIR2/319"
+local T =[[
+╔━━━━━━━━𓄼•★•𓄹━━━━━━━╗ 
+┇ ⦑𓆩.★ َِ𝗢ْ𝗺ْ𝗮َِ𝗥 ْ𝗮َِ𝗟 ُ𝗮َِ𝗛ْ𝗺َِ𝗘َِ𝗗 ★.𓆪⦒ ┇
+╚━━━━━━━━𓄼•★•𓄹━━━━━━━╝ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
+
 {
-{text = '✫ SNAYBIR 𝖲OURCE ', url = "https://t.me/SNAYBIR"}
+{text = '★ Developer', url = "https://t.me/OMMO10"},{text = '★ Exp Source .', url = "https://t.me/EPX_SNAYBIR"}
 },
 {
-{text = '✫ Source info ', url = "https://t.me/EPX_SNAYBIR"}
+{text = '★ TwS SNAYBIR', url = "https://t.me/QADHB_BOT"}
 },
 {
-{text = '✫ Coder ', url = "https://t.me/OMMO10"}
-},
-{
-{text = '✫ TwS ', url = "https://t.me/QADHB_BOT"}
+{text = ' ★ Source Channel', url = "https://t.me/SNAYBIR"}
 },
 }
-local msg_id = msg.id/2097152/0.5
-https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/NNAON/448&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+local msgg = msg_id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.."&caption=".. URL.escape(T).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'تعطيل التحقق' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
-Redis:del(itsOmaR.."OmaR:Status:joinet"..msg_chat_id) 
+Redis:del(TheOmaR.."OmaR:Status:joinet"..msg_chat_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تعطيل التحقق ","md",true)
 end
 if text == 'تفعيل التحقق' then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
-Redis:set(itsOmaR.."OmaR:Status:joinet"..msg_chat_id,true) 
+Redis:set(TheOmaR.."OmaR:Status:joinet"..msg_chat_id,true) 
 return LuaTele.sendText(msg_chat_id,msg_id,"▽︙تم تفعيل التحقق ","md",true)
 end
 --------------------------------------------------------------------------------------------------------------
