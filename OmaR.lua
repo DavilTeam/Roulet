@@ -6424,6 +6424,15 @@ local MsgId = msg.id/2097152/0.5
 local MSGID = string.gsub(MsgId,'.0','')
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/RemixDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..MsgId.."&parse_mode=markdown") 
 end
+if text == 'شيكول' or text == "؟؟" or text == "??" or text == "شنو يكول" then 
+if tonumber(msg.reply_to_message_id) > 0 then
+local result = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
+if result.content.voice_note then 
+local rep = msg.id/2097152/0.5
+https.request("https://api.medooo.ml/leomedo/voiceRecognise?token="..Token.."&chat_id="..msg_chat_id.."&file_id="..result.content.voice_note.voice.remote.id.."&msg_id="..rep)
+end
+end
+end
 --------------------------------------------------------------------------------------------------------------
 if text == "قفل التكرار" then 
 if not msg.Addictive then
