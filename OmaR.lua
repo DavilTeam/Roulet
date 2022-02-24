@@ -9943,7 +9943,7 @@ data = {
 return LuaTele.sendText(msg_chat_id,msg_id,'★︙عليك استخدام اوامر التحكم بالقوائم',"md",false, false, false, false, reply_markup)
 end
 if text == 'تمام' or text == 'تمامو' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -9957,7 +9957,7 @@ data = {
 return LuaTele.sendText(msg_chat_id,msg_id,'*تـدوم عمࢪيي💘 ️*',"md",false, false, false, false, reply_markup)
 end
 if text == '😐' or text == '🙂' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -9973,7 +9973,7 @@ end
 
 
 if text == 'اريد اكبل' or text == 'ارتبط' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -9989,7 +9989,7 @@ end
 
 
 if text == 'لتزحف' or text == 'زاحف' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10006,7 +10006,7 @@ end
 
 
 if text == 'كلخره' or text == 'كل خره' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10021,7 +10021,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*اسـف عمࢪيي مـا خلي�
 end
 
 if text == 'زحف' or text == 'زاحفه' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10036,7 +10036,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*زاحـف ع خـالـڪ شـڪ�
 end
 
 if text == 'دي' or text == 'دد' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10051,7 +10051,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*امـشـيڪ بـيها عمࢪي
 end
 
 if text == 'فرخ' or text == 'كحبه' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10066,7 +10066,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*ويـنـه بـلـه خـل حـ
 end
 
 if text == 'تعالي خاص' or text == 'خاص' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10080,7 +10080,7 @@ data = {
 return LuaTele.sendText(msg_chat_id,msg_id,'*هااا يـول اخـذتـها خـاص😹🙊 ️*',"md",false, false, false, false, reply_markup)
 end
 if text == 'اكرهك' or text == 'اكرهج' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10095,7 +10095,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*عـساس انـي مـيـت بي
 end
 
 if text == 'احبك' or text == 'احبج' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10110,7 +10110,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*يـحـياتـي وانـي هـ�
 end
 
 if text == 'باي' or text == 'سيو' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10125,7 +10125,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*ويـن دايـح عمࢪيي خ�
 end
 
 if text == 'عوائل' or text == 'صايره عوائل' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10140,7 +10140,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*حـبيـبي ولله ࢪبـط �
 end
 
 if text == 'واكف' or text == 'وكف' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10156,7 +10156,7 @@ end
 
 
 if text == 'وين المدير' or text == 'المدير' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10170,7 +10170,7 @@ data = {
 return LuaTele.sendText(msg_chat_id,msg_id,'*عمࢪيي تـفـضل وياڪ مـديـࢪ💘️*',"md",false, false, false, false, reply_markup)
 end
 if text == 'انجب' or text == 'نجبي' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -10185,7 +10185,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,'*صـاࢪ عمࢪيي💘🥺 ️*'
 end
 
 if text == 'تحبني' or text == 'تحبيني' then
-if not Redis:get(TheKOIA.."KOIA:Sasa:Jeka"..msg_chat_id) then
+if not Redis:get(TheOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
 end
 local reply_markup = LuaTele.replyMarkup{
