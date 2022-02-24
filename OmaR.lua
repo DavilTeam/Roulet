@@ -4229,6 +4229,10 @@ end
 Redis:set(itsOmaR.."OmaR:Status:ReplySudo"..msg_chat_id,true) 
 return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم تفعيل ردود المطور ","md",true)
 end
+if TextMsg == 'ردود السورس' then
+Redis:set(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id,true) 
+return LuaTele.sendText(msg_chat_id,msg_id,"* ◉ تم تفعيل ردود السورس *","md",true)
+end
 if TextMsg == 'الحظر' or TextMsg == 'الطرد' or TextMsg == 'التقييد' then
 if not msg.Managers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*᥀︙هاذا الامر يخص { '..Controller_Num(6)..' }* ',"md",true)  
@@ -5021,6 +5025,14 @@ return LuaTele.sendText(msg.chat_id,msg.id,'*\n᥀︙عليك الاشتراك �
 end
 Redis:del(itsOmaR.."OmaR:Status:Reply"..msg_chat_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"᥀︙تم تعطيل ردود المدير ","md",true)
+end
+if TextMsg == 'ردود السورس' then
+Redis:set(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id,true) 
+return LuaTele.sendText(msg_chat_id,msg_id,"* ◉ تم تفعيل ردود السورس *","md",true)
+end
+if TextMsg == 'ردود السورس' then
+Redis:del(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) 
+return LuaTele.sendText(msg_chat_id,msg_id,"* ◉ تم تعطيل ردود السورس *","md",true)
 end
 if TextMsg == 'ردود المطور' then
 if not msg.Managers then
@@ -10555,7 +10567,7 @@ end
 end
 if text == "المختلف" then
 if Redis:get(itsOmaR.."OmaR:Status:Games"..msg.chat_id) then
-mktlf = {"😸","☠","🐼","🐇","🌑","🌚","⭐️","✨","⛈","🌥","⛄️","👨‍🔬","👨‍💻","👨‍🔧","🧚‍♀","??‍♂","🧝‍♂","🙍‍♂","🧖‍♂","👬","🕒","🕤","⌛️","📅",};
+mktlf = {"😸","☠","🐼","🐇","🌑","🌚","⭐️","✨","⛈","🌥","⛄️","👨‍🔬","??‍💻","👨‍🔧","🧚‍♀","??‍♂","🧝‍♂","🙍‍♂","🧖‍♂","👬","🕒","🕤","⌛️","📅",};
 name = mktlf[math.random(#mktlf)]
 Redis:set(itsOmaR.."OmaR:Game:Difference"..msg.chat_id,name)
 name = string.gsub(name,"😸","😹😹😹😹😹😹😹😹😸😹😹😹😹")
