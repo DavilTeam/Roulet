@@ -9795,6 +9795,36 @@ data = {
 return LuaTele.sendText(msg_chat_id,msg_id,'*ويـنـه بـلـه خـل حـصـࢪه😹🤤 ️*',"md",false, false, false, false, reply_markup)
 end
 
+if text == 'هلو' or text == 'هلاو' then
+if not Redis:get(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
+return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
+end
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = '『 𝐒𝐎𝐔𝐑𝐂𝐄 𝐌𝐄𝑳𝐀𝐍𝐎』', url = 't.me/QQOQQD'}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id,'*هۂَلاا نۨہٰورتت يعمۘري 𖠙 🤤♥️*',"md",false, false, false, false, reply_markup)
+end
+
+if text == 'شلونك' or text == 'شلونج' then
+if not Redis:get(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
+return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
+end
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = '『 𝐒𝐎𝐔𝐑𝐂𝐄 𝐌𝐄𝑳𝐀𝐍𝐎』', url = 't.me/QQOQQD'}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id,'*تتمـام ححـب وانـت شلـونكك 🤭💘*',"md",false, false, false, false, reply_markup)
+end
+
 if text == 'تعالي خاص' or text == 'خاص' then
 if not Redis:get(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ⦁ ردود السورس معطلة*","md",true)  
