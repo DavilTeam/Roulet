@@ -8132,7 +8132,7 @@ data = {
 {text = 'تعطيل ردود المدير', data = msg.sender.user_id..'/'.. 'unmute_ryple'},{text = 'تفعيل ردود المدير', data = msg.sender.user_id..'/'.. 'mute_ryple'},
 },
 {
-{text = 'تعطيل ردود المطور', data = msg.sender.user_id..'/'.. 'unmute_ryplesudo'},{text = 'تفعيل ردود المطور', data = msg.sender.user_id..'/'.. 'mute_ryplesudo'},
+{text = 'تعطيل ردود المطور', data = msg.sender.user_id..'/'.. 'unmute_ryplesudoo'},{text = 'تفعيل ردود المطور', data = msg.sender.user_id..'/'.. 'mute_ryplesudoo'},
 },
 {
 {text = 'تعطيل الرفع', data = msg.sender.user_id..'/'.. 'unmute_setadmib'},{text = 'تفعيل الرفع', data = msg.sender.user_id..'/'.. 'mute_setadmib'},
@@ -9735,7 +9735,7 @@ data = {
 },
 }
 }
-return LuaTele.sendText(msg_chat_id,msg_id,'*اسـف عمࢪيي مـا خليڪ بـحـلڪي😹💘 ️*',"md",false, false, false, false, reply_markup)
+return LuaTele.sendText(msg_chat_id,msg_id,'*اسـف عمࢪيي مـا خليڪ بـحـلڪي😹?? ️*',"md",false, false, false, false, reply_markup)
 end
 
 if text == 'زحف' or text == 'زاحفه' then
@@ -12577,8 +12577,8 @@ Redis:del(itsOmaR.."OmaR:Status:Reply"..ChatId)
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '- رجوع', data =UserId..'/'.. 'listallAddorrem'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,Reply_Status(IdUser,"᥀︙تم تعطيل امر ردود المدير").unLock, 'md', true, false, reply_markup)
 end
-elseif Text and Text:match('(%d+)/unmute_ryplesudo') then
-local UserId = Text:match('(%d+)/unmute_ryplesudo')
+elseif Text and Text:match('(%d+)/unmute_ryplesudoo') then
+local UserId = Text:match('(%d+)/unmute_ryplesudoo')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(itsOmaR.."OmaR:Status:ReplySudo"..ChatId) 
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '- رجوع', data =UserId..'/'.. 'listallAddorrem'},},}}
@@ -12648,8 +12648,8 @@ Redis:set(itsOmaR.."OmaR:Status:Reply"..ChatId,true)
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '- رجوع', data =UserId..'/'.. 'listallAddorrem'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,Reply_Status(IdUser,"᥀︙تم تفعيل امر ردود المدير").unLock, 'md', true, false, reply_markup)
 end
-elseif Text and Text:match('(%d+)/mute_ryplesudo') then
-local UserId = Text:match('(%d+)/mute_ryplesudo')
+elseif Text and Text:match('(%d+)/mute_ryplesudoo') then
+local UserId = Text:match('(%d+)/mute_ryplesudoo')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:set(itsOmaR.."OmaR:Status:ReplySudo"..ChatId,true) 
 local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '- رجوع', data =UserId..'/'.. 'listallAddorrem'},},}}
@@ -12917,7 +12917,7 @@ data = {
 {text = 'تعطيل ردود المدير', data = IdUser..'/'.. 'unmute_ryple'},{text = 'تفعيل ردود المدير', data = IdUser..'/'.. 'mute_ryple'},
 },
 {
-{text = 'تعطيل ردود المطور', data = IdUser..'/'.. 'unmute_ryplesudo'},{text = 'تفعيل ردود المطور', data = IdUser..'/'.. 'mute_ryplesudo'},
+{text = 'تعطيل ردود المطور', data = IdUser..'/'.. 'unmute_ryplesudoo'},{text = 'تفعيل ردود المطور', data = IdUser..'/'.. 'mute_ryplesudoo'},
 },
 {
 {text = 'تعطيل الرفع', data = IdUser..'/'.. 'unmute_setadmib'},{text = 'تفعيل الرفع', data = IdUser..'/'.. 'mute_setadmib'},
