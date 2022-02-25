@@ -4259,18 +4259,6 @@ if TextMsg == 'ردود السورس' then
 Redis:set(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id,true) 
 return LuaTele.sendText(msg_chat_id,msg_id,"* ✫ تم تفعيل ردود السورس *","md",true)
 end
-if TextMsg == 'صورتي' then
-Redis:set(itsOmaR.."OmaR:Status:photo"..msg_chat_id,true) 
-return LuaTele.sendText(msg_chat_id,msg_id,"✫ تم تفعيل صورتي ","md",true)
-end
-if TextMsg == 'قول' then
-Redis:set(itsOmaR.."OmaR:Status:kool"..msg_chat_id,true) 
-return LuaTele.sendText(msg_chat_id,msg_id,"✫ تم تفعيل امر قول ","md",true)
-end
-if TextMsg == 'جمالي' then
-Redis:set(itsOmaR.."OmaR:Status:gamle"..msg_chat_id,true) 
-return LuaTele.sendText(msg_chat_id,msg_id,"✫ تم تفعيل جمالي ","md",true)
-end
 if TextMsg == 'الحظر' or TextMsg == 'الطرد' or TextMsg == 'التقييد' then
 if not msg.Managers then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(6)..' }* ',"md",true)  
@@ -4774,14 +4762,6 @@ keyboardd.inline_keyboard = {
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. msg.chat_id .. '&photo=https://t.me/PhotosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == "صورتي" then
-if Redis:get(itsOmaR.."OmaR:Status:photo"..msg.chat_id) then
-local photo = LuaTele.getUserProfilePhotos(msg.sender.user_id)
-if photo.total_count > 0 then
-return LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,"*عدد صورك هو "..photo.total_count.." صوره*", "md")
-else
-return LuaTele.sendText(msg_chat_id,msg_id,'*● لا توجد صوره ف حسابك*',"md",true) 
-end
 if text == 'المالك' or text == 'المنشئ' then
 if msg.can_be_deleted_for_all_users == false then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n*•︙︙عذرآ البوت ليس ادمن في المجموعه يرجى ترقيته وتفعيل الصلاحيات له *","md",true)  
@@ -5082,18 +5062,6 @@ return LuaTele.sendText(msg.chat_id,msg.id,'*\n✫︙عليك الاشتراك �
 end
 Redis:del(itsOmaR.."OmaR:Status:Reply"..msg_chat_id) 
 return LuaTele.sendText(msg_chat_id,msg_id,"✫︙تم تعطيل ردود المدير ","md",true)
-end
-if TextMsg == 'صورتي' then
-Redis:del(itsOmaR.."OmaR:Status:photo"..msg_chat_id) 
-return LuaTele.sendText(msg_chat_id,msg_id,"✫ تم تعطيل صورتي ","md",true)
-end
-if TextMsg == 'كول' then
-Redis:del(itsOmaR.."OmaR:Status:kool"..msg_chat_id) 
-return LuaTele.sendText(msg_chat_id,msg_id,"✫ تم تعطيل امر كول ","md",true)
-end
-if TextMsg == 'جمالي' then
-Redis:del(itsOmaR.."OmaR:Status:gamle"..msg_chat_id) 
-return LuaTele.sendText(msg_chat_id,msg_id,"✫ تم تعطيل جمالي ","md",true)
 end
 if TextMsg == 'ردود السورس' then
 Redis:del(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) 
