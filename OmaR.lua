@@ -4876,13 +4876,13 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '✫︙ مسح المالكين ', data = msg.sender.user_id..'/TheBasicsQ'},{text = 'مسح الادمنيه', data = msg.sender.user_id..'/'.. 'Addictive'},
+{text = '✫︙ مسح المالكين ', data  = msg.sender.user_id..'/'.. 'TheBasicsQ'},{text = 'مسح الادمنيه', data = msg.sender.user_id..'/'.. 'Addictive'},
 },
 {
 {text = 'مسح المدراء', data = msg.sender.user_id..'/'.. 'Managers'},{text = 'مسح المنشئين', data = msg.sender.user_id..'/'.. 'Originators'},
 },
 {
-{text = ' مسح الاساسين ', data =msg.sender.user_id..'/'.. 'TheBasics'}{text = '✫︙ مسح المميزين ', data = msg.sender.user_id..'/DelDistinguished'},
+{text = ' مسح الاساسين ', data =msg.sender.user_id..'/'.. 'TheBasics'},{text = '✫︙ مسح المميزين ', data = msg.sender.user_id..'/'.. 'DelDistinguished'},
 },
 {
 {text = '✫  إخفاء الأمر ', data =msg.sender.user_id..'/'.. 'delAmr'}
