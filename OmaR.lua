@@ -5545,7 +5545,7 @@ end
 LuaTele.setChatMemberStatus(msg.chat_id,UserId_Info.id,'restricted',{1,1,1,1,1,1,1,1})
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"✫︙تم الغاء تقييده من المجموعه").Reply,"md",true)  
 end
-end
+
 if text and text:match('^طرد @(%S+)$') then
 local UserName = text:match('^طرد @(%S+)$')
 if not msg.Addictive then
@@ -5600,6 +5600,7 @@ data = {
 }
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"✫︙تم طرده من المجموعه ").Reply,"md",true, false, false, false, reply_markup)
 end 
+end
 if text == ('حظر عام') and msg.reply_to_message_id ~= 0 then
 if not msg.DevelopersQ then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(2)..' }* ',"md",true)  
