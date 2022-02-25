@@ -8528,7 +8528,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,"\n*✫︙لا يمكن تنزيل ر
 end
 Redis:srem(itsOmaR.."OmaR:Distinguished:Group"..msg_chat_id, Message_Reply.sender.user_id)
 end
-return LuaTele.sendText(msg_chat_id,msg_id,"\n*✫︙تم تنزيل الشخص من جميع الرتب { "اصبح الان عضو في المجموعه" *}","md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,"\n*✫︙تم تنزيل الشخص من الرتب التاليه { "..dev..""..crr..""..cr..""..own..""..mod..""..vip.." *}","md",true)  
 end
 
 if text and text:match('^تنزيل الكل @(%S+)$') then
@@ -8631,7 +8631,7 @@ return LuaTele.sendText(msg_chat_id,msg_id,"\n*✫︙لا يمكن تنزيل ر
 end
 Redis:srem(itsOmaR.."OmaR:Distinguished:Group"..msg_chat_id, UserId_Info.id)
 end
-return LuaTele.sendText(msg_chat_id,msg_id,"\n*✫︙تم تنزيل الشخص من جميع الرتب { "صبح الان عضو في المجموعه *}","md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,"\n*✫︙تم تنزيل الشخص من الرتب التاليه { "..dev..""..crr..""..cr..""..own..""..mod..""..vip.." *}","md",true)  
 end
 
 if text == ('رفع مشرف') and msg.reply_to_message_id ~= 0 then
