@@ -1572,7 +1572,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'sourceOmaR', url='https://t.me/EKKKK6'},
+{text = '✫Source RouleT', url='https://t.me/iih5i'},
 },
 }
 }
@@ -1769,7 +1769,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'sourceOmaR', url='https://t.me/EKKKK6'},
+{text = '✫Source RouleT', url='https://t.me/iih5i'},
 },
 }
 }
@@ -2033,7 +2033,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'sourceOmaR', url='https://t.me/EKKKK6'},
+{text = '✫Source RouleT', url='https://t.me/iih5i'},
 },
 }
 }
@@ -4303,7 +4303,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = 'sourceOmaR', url='https://t.me/EKKKK6'},
+{text = '✫Source RouleT', url='https://t.me/iih5i'},
 },
 }
 }
@@ -4653,7 +4653,7 @@ Abs = math.random(2,140);
 local Text ='*•︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ❳',url="t.me/EKKKK6"}},
+{{text = '❲ ✫Source RouleT ❳',url="t.me/iih5i"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4663,7 +4663,7 @@ Abs = math.random(2,140);
 local Text ='*᥀︙تم اختيار متحركه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ❳',url="t.me/EKKKK6"}},
+{{text = '❲ ✫Source RouleT ❳',url="t.me/iih5i"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4673,7 +4673,7 @@ Abs = math.random(2,140);
 local Text ='*•︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ❳',url="t.me/EKKKK6"}},
+{{text = '❲ ✫Source RouleT ❳',url="t.me/iih5i"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/shaarshahum/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4683,7 +4683,7 @@ Abs = math.random(2,140);
 local Text ='*•︙تم اختيار الميمز لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '❲ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ❳',url="t.me/EKKKK6"}},
+{{text = '❲ ✫Source RouleT ❳',url="t.me/iih5i"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/remixsource/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4694,7 +4694,7 @@ local Text ='*᥀︙تم اختيار ريمكس لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4706,7 +4706,7 @@ local Text ='*᥀︙تم اختيار الفلم لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4718,7 +4718,7 @@ local Text ='*᥀︙تم اختيار انمي لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4749,11 +4749,11 @@ else
 Bio = ''
 end
 if photo.total_count > 0 then
-local TestText = "  ❲ Owner Groups ❳\n— — — — — — — — —\n •︙*Owner Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserInfo.id..")\n•︙*Owner Bio* : [❲ "..Bio.." ❳]"
-keyboardd = {} 
+local TestText = "  ❲ Owner Group ❳\n— — — — — — — — —\n •︙*Owner Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserInfo.id..")\n•︙*Owner Bio* : [❲ "..Bio.." ❳]"
+keyboardd = {} ف
 keyboardd.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4781,7 +4781,7 @@ local TestText = "  ❲ Developers Bot ❳\n— — — — — — — — —\
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/m98oh8"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4793,7 +4793,7 @@ return https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_i
 end
 end
 if text == 'مبرمج سورس' or text == 'مبرمج السورس' or text == 'المبرمج' then  
-local UserId_Info = LuaTele.searchPublicChat("EKKKK5")
+local UserId_Info = LuaTele.searchPublicChat("m98oh8")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -4804,11 +4804,11 @@ Bio = ''
 end
 local photo = LuaTele.getUserProfilePhotos(UserId_Info.id)
 if photo.total_count > 0 then
-local TestText = "  ❲ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ❳\n— — — — — — — — —\n •︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n•︙*Dev Bio* : [❲ "..Bio.." ❳]"
+local TestText = "  ❲ ✫Source RouleT ❳\n— — — — — — — — —\n •︙*Dev Name* :  ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n•︙*Dev Bio* : [❲ "..Bio.." ❳]"
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4818,10 +4818,10 @@ local TestText = "- معلومات مبرمج السورس : \\nn: name Dev . ["
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '❲ 𝖼𝗈𝖽𝖾𝗋 ❳', url = "https://t.me/EKKKK5"}
+{text = '❲ ✫Developer ❳', url = "https://t.me/m98oh8"}
 },
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"},
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4938,22 +4938,22 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
 local Text =[[
 
-- 𝗐ᴇʟᴄᴏ𝗆𝖾 ᴛᴏ 𝗌𝗈𝗎𝗋𝖼𝖾 OmaR .
+- 𝗐ᴇʟᴄᴏ𝗆𝖾 ᴛᴏ 𝗌𝗈𝗎𝗋𝖼𝖾 RouleT .
 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❲ Source OmaR ❳', url = "https://t.me/EKKKK6"}
+{text = '❲ ✫Source RouleT ❳', url = "https://t.me/iih5i"}
 },
 {
-{text = '❲ Source info ❳', url = "https://t.me/EKKKK7"}
+{text = '❲ ✫Source info ❳', url = "https://t.me/iih5i"}
 },
 {
-{text = '❲ Coder ❳', url = "https://t.me/EKKKK5"}
+{text = '❲ ✫Developer ❳', url = "https://t.me/m98oh8"}
 },
 {
-{text = '❲ TwS ❳', url = "https://t.me/EKKKK3bot"}
+{text = '❲ ✫ZkrafA RouleT ❳', url = "https://t.me/j2u2bot"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -8221,7 +8221,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9538,7 +9538,7 @@ data = {
 {text = '{ اوامر القفل / الفتح }', data = msg.sender.user_id..'/NoNextSeting'}, {text = '{ اوامر التعطيل / التفعيل }', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9566,7 +9566,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9586,7 +9586,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9606,7 +9606,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9626,7 +9626,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9646,7 +9646,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -9666,7 +9666,7 @@ data = {
 {text = '{ قائمه الاوامر }', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -10804,7 +10804,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -10817,7 +10817,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -11704,7 +11704,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -11762,7 +11762,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -11821,7 +11821,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -11874,7 +11874,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -11914,7 +11914,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -11969,7 +11969,7 @@ data = {
 {text = '{ القائمه الرئيسيه }', data = IdUser..'/helpall'},
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
@@ -12010,7 +12010,7 @@ data = {
 {text = '{ اوامر القفل / الفتح }', data = IdUser..'/NoNextSeting'}, {text = '{ اوامر التعطيل / التفعيل }', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '- قناة السورس', url = 't.me/EKKKK6'}, 
+{text = '- قناة السورس', url = 't.me/iih5i'}, 
 },
 }
 }
