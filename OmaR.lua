@@ -1572,7 +1572,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '✫ SOURCE SNAYBIR', url='https://t.me/SNAYBIR'},
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url='https://t.me/SNAYBIR'},
 },
 }
 }
@@ -1769,7 +1769,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '✫ SOURCE SNAYBIR', url='https://t.me/SNAYBIR'},
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url='https://t.me/SNAYBIR'},
 },
 }
 }
@@ -2033,7 +2033,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '✫ SOURCE SNAYBIR', url='https://t.me/SNAYBIR'},
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url='https://t.me/SNAYBIR'},
 },
 }
 }
@@ -4329,7 +4329,7 @@ data = {
 {text = '- الغاء الامر', data = msg.sender.user_id..'/delamrredis'},
 },
 {
-{text = '✫ SOURCE SNAYBIR', url='https://t.me/SNAYBIR'},
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url='https://t.me/SNAYBIR'},
 },
 }
 }
@@ -4720,7 +4720,7 @@ local Text ='*✫︙تم اختيار ريمكس لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4732,7 +4732,7 @@ local Text ='*✫︙تم اختيار الفلم لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4744,7 +4744,7 @@ local Text ='*✫︙تم اختيار انمي لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4752,11 +4752,11 @@ https.request("https://api.telegram.org/bot"..Token..'/sendphoto?chat_id=' .. ms
 end
 if text == "صورة" or text == "صوره" then 
 Abs = math.random(2,140); 
-local Text ='*✫︙تم اختيار انمي لك*'
+local Text ='*✫︙تم اختيار صوره لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4791,7 +4791,7 @@ local TestText = "  ✫ Owner Groups\n— — — — — — — — —\n •�
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4819,7 +4819,7 @@ local TestText = "  ✫ Developers Bot\n— — — — — — — — —\n �
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4846,7 +4846,7 @@ local TestText = "  ✫ SNAYBIR 𝖲𝗈𝗎𝗋𝖼𝖾 \n— — — — — �
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4859,7 +4859,7 @@ keyboardd.inline_keyboard = {
 {text = '✫ 𝖼𝗈𝖽𝖾𝗋  ', url = "https://t.me/OMMO10"}
 },
 {
-{text = '✫ Source SNAYBIR ', url = "https://t.me/SNAYBIR"},
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4868,7 +4868,7 @@ end
 end
 end
 
-if text == "مسح الرتب" then    
+if text == "مسح الرتب" or text == "تنزيل الكل" then    
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*•︙هاذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
@@ -4876,13 +4876,13 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '✫︙ مسح المالكين ', data  = msg.sender.user_id..'/'.. 'TheBasicsQ'},{text = 'مسح الادمنيه', data = msg.sender.user_id..'/'.. 'Addictive'},
+{text = '✫︙ مسح المالكين ', data  = msg.sender.user_id..'/'.. 'TheBasicsQ'},{text = '✫︙مسح الادمنيه', data = msg.sender.user_id..'/'.. 'Addictive'},
 },
 {
-{text = 'مسح المدراء', data = msg.sender.user_id..'/'.. 'Managers'},{text = 'مسح المنشئين', data = msg.sender.user_id..'/'.. 'Originators'},
+{text = '✫︙مسح المدراء', data = msg.sender.user_id..'/'.. 'Managers'},{text = '✫︙مسح المنشئين', data = msg.sender.user_id..'/'.. 'Originators'},
 },
 {
-{text = ' مسح الاساسين ', data =msg.sender.user_id..'/'.. 'TheBasics'},{text = '✫︙ مسح المميزين ', data = msg.sender.user_id..'/'.. 'DelDistinguished'},
+{text = '✫︙مسح الاساسين ', data =msg.sender.user_id..'/'.. 'TheBasics'},{text = '✫︙ مسح المميزين ', data = msg.sender.user_id..'/'.. 'DelDistinguished'},
 },
 {
 {text = '✫  إخفاء الأمر ', data =msg.sender.user_id..'/'.. 'delAmr'}
@@ -9823,8 +9823,34 @@ data = {
 }
 return LuaTele.sendText(msg_chat_id,msg_id,'*امـشي وخࢪ مـنـا يدوࢪ تـڪـبيل😏 ️*',"md",false, false, false, false, reply_markup)
 end
-
-
+if text == 'هايي' or text == 'هاي' then
+if not Redis:get(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
+return LuaTele.sendText(msg_chat_id,msg_id,"* ✫ ردود السورس معطلة*","md",true)  
+end
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = 't.me/SNAYBIR'}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id,'*نزوج 🥺😂 ️*',"md",false, false, false, false, reply_markup)
+end
+if text == 'هاا' or text == 'ها' then
+if not Redis:get(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
+return LuaTele.sendText(msg_chat_id,msg_id,"* ✫ ردود السورس معطلة*","md",true)  
+end
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',
+data = {
+{
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = 't.me/SNAYBIR'}, 
+},
+}
+}
+return LuaTele.sendText(msg_chat_id,msg_id,'*وجعا تع شوف شيريدون منك  ️*',"md",false, false, false, false, reply_markup)
+end
 if text == 'لتزحف' or text == 'زاحف' then
 if not Redis:get(itsOmaR.."OmaR:Sasa:Jeka"..msg_chat_id) then
 return LuaTele.sendText(msg_chat_id,msg_id,"* ✫ ردود السورس معطلة*","md",true)  
@@ -13867,6 +13893,12 @@ if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(itsOmaR.."OmaR:TheBasics:Group"..ChatId) 
 LuaTele.editMessageText(ChatId,Msg_id,"✫︙تم مسح المنشئين الاساسيين", 'md', false)
 end
+elseif Text and Text:match('(%d+)/TheBasicsQ') then
+local UserId = Text:match('(%d+)/TheBasicsQ')
+if tonumber(IdUser) == tonumber(UserId) then
+Redis:del(itsOmaR.."OmaR:TheBasicsQ:Group"..ChatId) 
+LuaTele.editMessageText(ChatId,Msg_id,"✫︙تم مسح المالكين", 'md', false)
+end
 elseif Text and Text:match('(%d+)/Originators') then
 local UserId = Text:match('(%d+)/Originators')
 if tonumber(IdUser) == tonumber(UserId) then
@@ -13903,12 +13935,6 @@ local UserId = Text:match('(%d+)/BanGroup')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(itsOmaR.."OmaR:BanGroup:Group"..ChatId) 
 LuaTele.editMessageText(ChatId,Msg_id,"✫︙تم مسح المحظورين", 'md', false)
-end
-elseif Text and Text:match('(%d+)/TheBasicsQ') then
-local UserId = Text:match('(%d+)/TheBasicsQ')
-if tonumber(IdUser) == tonumber(UserId) then
-Redis:del(itsOmaR.."OmaR:TheBasicsQ:Group"..ChatId) 
-LuaTele.editMessageText(ChatId,Msg_id,"* ✫︙تم مسح المالكين *", 'md', false)
 end
 elseif Text and Text:match('(%d+)/SilentGroupGroup') then
 local UserId = Text:match('(%d+)/SilentGroupGroup')
