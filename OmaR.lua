@@ -10902,7 +10902,7 @@ data = {
 {text = 'تنظيف المجموعات ✫',type = 'text'},{text = 'تنظيف المشتركين ✫', type = 'text'},
 },
 {
-{text = 'جلب النسخه الاحتياطيه ✫',type = 'text'},,{text = 'جلب الردود ✫', type = 'text'},
+{text = 'جلب النسخه الاحتياطيه ✫',type = 'text'},{text = 'جلب الردود ✫', type = 'text'},
 },
 {
 {text = 'اضف رد عام ✫',type = 'text'},{text = 'حذف رد عام ✫', type = 'text'},
