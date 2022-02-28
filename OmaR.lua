@@ -4651,7 +4651,7 @@ local MSGID = string.gsub(MsgId,'.0','')
 local httpsCurl = "https://devstorm.ml/YoutubeApi/tahaj200.php?token="..Token.."&msg="..MSGID.."&Text="..URL.escape(Ttext).."&chat_id="..msg_chat_id.."&user="..msg.sender.user_id
 io.popen('curl -s "'..httpsCurl..'"')
 end
-if text == "@all" or text == "تاك عام" or text == "all" then
+if text == "@all" or text == "تاك عام" or text == "all" or text == "a" or text == "A" or text == "تعو" then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
@@ -10757,7 +10757,6 @@ Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'مك','�
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'رد','اضف رد')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'سح','مسح سحكاتي')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'غ','غنيلي')
-Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'تعو','تاك عام')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'ت','تثبيت')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'.','غنيلي')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'رس','رسائلي')
@@ -10774,7 +10773,6 @@ return LuaTele.sendText(msg_chat_id,msg_id,[[*
 ✫︙ رفع مطور - مط .
 ✫︙رفع مطور ثانوي - ثا .
 ✫︙ تثبيت - ت .
-✫︙ تاك عام - تعو .
 ✫︙ تنزيل الكل - تك .
 ✫︙ تعطيل الايدي بالصوره - تعط .
 ✫︙ تفعيل الايدي بالصوره - تفع .
