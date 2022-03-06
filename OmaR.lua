@@ -5621,7 +5621,7 @@ if not msg.Originators and not Redis:get(itsOmaR.."OmaR:Status:BanId"..msg_chat_
 return LuaTele.sendText(msg_chat_id,msg_id,"✫︙تم تعطيل (الحظر : الطرد : التقييد) من قبل المدراء","md",true)
 end 
 local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
-local UserInfo = LuaTele.getUser(Message_Reply.'sender'.user_id)
+local UserInfo = LuaTele.getUser(Message_Reply.sender.user_id)
 if UserInfo.message == "Invalid user ID" then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n✫︙عذرآ تستطيع فقط استخدام الامر على المستخدمين ","md",true)  
 end
