@@ -2157,7 +2157,7 @@ if NewCmmd then
 text = (NewCmmd or text)
 end
 end
-if text == 'رفع النسخه الاحتياطيه' and msg.reply_to_message_id ~= 0 or text == 'رفع النسخه ' and msg.reply_to_message_id ~= 0 then
+if text == 'رفع النسخه الاحتياطيه' and msg.reply_to_message_id ~= 0 or text == 'رفع النسخه' and msg.reply_to_message_id ~= 0 then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -2324,7 +2324,7 @@ os.execute('rm -rf OmaR.lua')
 download('http://october3.ml/SORASOmaR/SNAYBIR.lua','Snabir.lua')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙تم تحديث السورس * ',"md",true)  
 end
-if text == 'جلب النسخه الاحتياطيه ✫' or text == 'جلب النسخه' then
+if text == 'جلب النسخه الاحتياطيه ✫' or text == 'جلب النسخه' or text == 'جلب النسخه الاحتياطيه' then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -2421,7 +2421,7 @@ File:write(Get_Json)
 File:close()
 return LuaTele.sendDocument(msg_chat_id,msg_id,'./'..UserBot..'.json', '*✫︙تم جلب النسخه الاحتياطيه\n✫︙تحتوي على {'..#Groups..'} مجموعه \n✫︙وتحتوي على {'..#UsersBot..'} مشترك *\n', 'md')
 end
-if text == 'جلب الردود' then
+if text == 'جلب الردود' or text == "جلب نسخه الردود ✫" then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -2477,7 +2477,7 @@ File:write(Get_Json)
 File:close()
 return LuaTele.sendDocument(msg_chat_id,msg_id,'./ReplyGroups.json', '', 'md')
 end
-if text == 'رفع الردود' and msg.reply_to_message_id ~= 0 then
+if text == 'رفع الردود' or text == 'رفع نسخه الردود' and msg.reply_to_message_id ~= 0 then
 if not msg.ControllerBot then 
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
@@ -2733,6 +2733,10 @@ end
 end
 if chat_type(msg.chat_id) == "GroupBot" and Redis:sismember(itsOmaR.."OmaR:ChekBotAdd",msg_chat_id) then
 if text == "ايدي" and msg.reply_to_message_id == 0 then
+if ChannelJoin(msg) == false then
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/'..Redis:get(TheSnaybir..'Snaybir:Channel:Join')}, },}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*\n★︙عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
+end 
 if not Redis:get(itsOmaR.."OmaR:Status:Id"..msg_chat_id) then
 return false
 end
@@ -4612,7 +4616,7 @@ end
 local gmria = Redis:scard(itsOmaR.."OmaR:allM"..msg.chat_id)  
  LuaTele.sendText(msg_chat_id,msg_id,"✫︙عدد الميديا الموجود هو (* "..gmria.." *)","md")
 end
-if text == "تعطيل امسح " then        
+if text == "تعطيل امسح" then        
 if not msg.TheBasics then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(4)..' }* ',"md",true)  
 end
@@ -4620,7 +4624,7 @@ Redis:del(itsOmaR.."OmaR:Status:Del:Media"..msg.chat_id)
  LuaTele.sendText(msg_chat_id,msg_id,'✫︙تم تعطيل المسح التلقائي للميديا')
 return false
 end 
-if text == "تفعيل امسح " then        
+if text == "تفعيل امسح" then        
 if not msg.TheBasics then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هاذا الامر يخص { '..Controller_Num(4)..' }* ',"md",true)  
 end
@@ -4651,7 +4655,7 @@ local MSGID = string.gsub(MsgId,'.0','')
 local httpsCurl = "https://devstorm.ml/YoutubeApi/tahaj200.php?token="..Token.."&msg="..MSGID.."&Text="..URL.escape(Ttext).."&chat_id="..msg_chat_id.."&user="..msg.sender.user_id
 io.popen('curl -s "'..httpsCurl..'"')
 end
-if text == "@all" or text == "تاك عام" or text == "all" then
+if text == "@all" or text == "تاك عام" or text == "all" or text == "a" or text == "تعو" or text == "A" then
 if not msg.Addictive then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*✫︙هذا الامر يخص { '..Controller_Num(7)..' }* ',"md",true)  
 end
@@ -4679,7 +4683,7 @@ Abs = math.random(2,140);
 local Text ='*•︙تم اختيار الاغنيه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✫ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ',url="t.me/SNAYBIR"}},
+{{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR',url="t.me/SNAYBIR"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/TEAMSUL/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4689,7 +4693,7 @@ Abs = math.random(2,140);
 local Text ='*✫︙تم اختيار متحركه لك*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✫ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ',url="t.me/SNAYBIR"}},
+{{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR',url="t.me/SNAYBIR"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendanimation?chat_id=' .. msg.chat_id .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4699,7 +4703,7 @@ Abs = math.random(2,140);
 local Text ='*•︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✫ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ',url="t.me/SNAYBIR"}},
+{{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR',url="t.me/SNAYBIR"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/shaarshahum/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4709,7 +4713,7 @@ Abs = math.random(2,140);
 local Text ='*•︙تم اختيار الميمز لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '✫ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 ',url="t.me/SNAYBIR"}},
+{{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR',url="t.me/SNAYBIR"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/remixsource/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4720,7 +4724,7 @@ local Text ='*✫︙تم اختيار ريمكس لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4732,7 +4736,7 @@ local Text ='*✫︙تم اختيار الفلم لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4744,7 +4748,7 @@ local Text ='*✫︙تم اختيار انمي لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4756,7 +4760,7 @@ local Text ='*✫︙تم اختيار صوره لك*'
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5
@@ -4791,7 +4795,7 @@ local TestText = "  ✫ Owner Groups\n— — — — — — — — —\n •�
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4819,7 +4823,7 @@ local TestText = "  ✫ Developers Bot\n— — — — — — — — —\n �
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4846,7 +4850,7 @@ local TestText = "  ✫ OmaR 𝖲𝗈𝗎𝗋𝖼𝖾 \n— — — — — — 
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"}
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -4859,7 +4863,7 @@ keyboardd.inline_keyboard = {
 {text = '✫ 𝖼𝗈𝖽𝖾𝗋  ', url = "https://t.me/OMMO10"}
 },
 {
-{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR ', url = "https://t.me/SNAYBIR"},
+{text = '✫ Sُِ𝙾َِUِۛ𝚁ِ۬ۘSِۨ𝙴 ِْSِْ𝙽َِۙAِ͚ۛ𝚈َِIِۗ𝙱َِR', url = "https://t.me/SNAYBIR"},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -5617,7 +5621,7 @@ if not msg.Originators and not Redis:get(itsOmaR.."OmaR:Status:BanId"..msg_chat_
 return LuaTele.sendText(msg_chat_id,msg_id,"✫︙تم تعطيل (الحظر : الطرد : التقييد) من قبل المدراء","md",true)
 end 
 local Message_Reply = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
-local UserInfo = LuaTele.getUser(Message_Reply.sender.user_id)
+local UserInfo = LuaTele.getUser(Message_Reply.'sender'.user_id)
 if UserInfo.message == "Invalid user ID" then
 return LuaTele.sendText(msg_chat_id,msg_id,"\n✫︙عذرآ تستطيع فقط استخدام الامر على المستخدمين ","md",true)  
 end
@@ -10757,7 +10761,6 @@ Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'مك','�
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'رد','اضف رد')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'سح','مسح سحكاتي')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'غ','غنيلي')
-Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'all','تعو')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'ت','تثبيت')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'.','غنيلي')
 Redis:set(itsOmaR.."OmaR:Get:Reides:Commands:Group"..msg_chat_id..":"..'رس','رسائلي')
@@ -10774,7 +10777,6 @@ return LuaTele.sendText(msg_chat_id,msg_id,[[*
 ✫︙ رفع مطور - مط .
 ✫︙رفع مطور ثانوي - ثا .
 ✫︙ تثبيت - ت .
-✫︙ all - تعو .
 ✫︙ تنزيل الكل - تك .
 ✫︙ تعطيل الايدي بالصوره - تعط .
 ✫︙ تفعيل الايدي بالصوره - تفع .
@@ -10886,7 +10888,7 @@ data = {
 {text = 'تنظيف المجموعات ✫',type = 'text'},{text = 'تنظيف المشتركين ✫', type = 'text'},
 },
 {
-{text = 'جلب النسخه الاحتياطيه ✫',type = 'text'},
+{text = 'جلب النسخه الاحتياطيه ✫',type = 'text'},{text = 'جلب نسخه الردود ✫', type = 'text'},
 },
 {
 {text = 'اضف رد عام ✫',type = 'text'},{text = 'حذف رد عام ✫', type = 'text'},
